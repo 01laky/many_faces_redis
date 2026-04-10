@@ -53,7 +53,7 @@ Z koreňa `_mfai_demo`:
 git submodule update --init redis_demo
 ```
 
-Prvé publikovanie tohto repa na GitHub a registrácia submodule je popísaná v `GIT_SUBMODULES_SETUP.md` (root).
+Prvé publikovanie tohto repa na GitHub a registrácia submodule je popísaná v [`docs/guides/git-submodules.md`](../docs/guides/git-submodules.md) (monorepo root).
 
 ## Kontajner
 
