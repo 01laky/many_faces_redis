@@ -57,8 +57,8 @@ First-time publish on GitHub and registering the submodule: [`docs/guides/git-su
 
 ## Container
 
-| Name        | Port  |
-|------------|-------|
+| Name        | Port |
+| ----------- | ---- |
 | `redis-dev` | 6379 |
 
 ## Test
