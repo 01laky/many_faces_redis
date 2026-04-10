@@ -1,63 +1,63 @@
 # Redis Demo (`redis_demo`)
 
-Samostatný repozitár (git submodule v `_mfai_demo`) – Redis 7 pre **job frontu** backendu (`bedemo:jobs:ready`, `bedemo:jobs:delayed`).
+Standalone repository (git submodule in `_mfai_demo`) — Redis 7 for the backend **job queue** (`bedemo:jobs:ready`, `bedemo:jobs:delayed`).
 
-## Čo beží
+## What runs
 
-- **Redis** – port **6379** na localhost
-- **AOF** zapnuté (`appendonly yes`) – dáta v Docker volume `redis-data`
+- **Redis** — port **6379** on localhost
+- **AOF** enabled (`appendonly yes`) — data in Docker volume `redis-data`
 
-## Požiadavky
+## Requirements
 
-- Docker a Docker Compose v2 (`docker compose`) alebo `docker-compose`
+- Docker and Docker Compose v2 (`docker compose`) or `docker-compose`
 
-## Spustenie
+## Start
 
 ```bash
 cd redis_demo
 ./start-redis.sh
 ```
 
-Alebo:
+Or:
 
 ```bash
 cd redis_demo
 docker-compose up -d
 ```
 
-## Zastavenie
+## Stop
 
 ```bash
 ./stop-redis.sh
 ```
 
-## Úplné zmazanie (vrátane dát)
+## Full reset (including data)
 
 ```bash
 ./clear-redis.sh
 ```
 
-## Pripojenie z `_mfai_demo`
+## Connection from `_mfai_demo`
 
-Kontajner **be-demo-dev** v root `docker-compose.dev.yml` používa:
+The **be-demo-dev** container in root `docker-compose.dev.yml` uses:
 
 `Redis__Configuration=host.docker.internal:6379`
 
-Najprv spusti Redis z tohto repa (publikovaný port 6379), potom backend.
+Start Redis from this repo (published port 6379), then the backend.
 
-## Git submodule v root monorepe
+## Git submodule in the monorepo root
 
-Z koreňa `_mfai_demo`:
+From `_mfai_demo` root:
 
 ```bash
 git submodule update --init redis_demo
 ```
 
-Prvé publikovanie tohto repa na GitHub a registrácia submodule je popísaná v [`docs/guides/git-submodules.md`](../docs/guides/git-submodules.md) (monorepo root).
+First-time publish on GitHub and registering the submodule: [`docs/guides/git-submodules.md`](../docs/guides/git-submodules.md) (monorepo root).
 
-## Kontajner
+## Container
 
-| Názov       | Port  |
+| Name        | Port  |
 |------------|-------|
 | `redis-dev` | 6379 |
 
