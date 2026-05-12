@@ -1,4 +1,4 @@
-# Redis Demo (`many_faces_redis`)
+# Many Faces Redis (`many_faces_redis`)
 
 Standalone repository (git submodule in **`many_faces_main`**) — Redis 7 for the backend **job queue** (`bedemo:jobs:ready`, `bedemo:jobs:delayed`).
 
