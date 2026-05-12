@@ -15,7 +15,7 @@ Standalone repository (git submodule in **`many_faces_main`**) — Redis 7 for t
 
 ```bash
 cd many_faces_redis
-./start-redis.sh
+./scripts/start-redis.sh
 ```
 
 Or:
@@ -28,13 +28,13 @@ docker-compose up -d
 ## Stop
 
 ```bash
-./stop-redis.sh
+./scripts/stop-redis.sh
 ```
 
 ## Full reset (including data)
 
 ```bash
-./clear-redis.sh
+./scripts/clear-redis.sh
 ```
 
 ## Connection from `many_faces_main`
