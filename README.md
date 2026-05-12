@@ -1,4 +1,4 @@
-# Redis Demo (`redis_demo`)
+# Redis Demo (`many_faces_redis`)
 
 Standalone repository (git submodule in **`many_faces_main`**) — Redis 7 for the backend **job queue** (`bedemo:jobs:ready`, `bedemo:jobs:delayed`).
 
@@ -14,14 +14,14 @@ Standalone repository (git submodule in **`many_faces_main`**) — Redis 7 for t
 ## Start
 
 ```bash
-cd redis_demo
+cd many_faces_redis
 ./start-redis.sh
 ```
 
 Or:
 
 ```bash
-cd redis_demo
+cd many_faces_redis
 docker-compose up -d
 ```
 
@@ -50,7 +50,7 @@ Start Redis from this repo (published port 6379), then the backend.
 From `many_faces_main` root:
 
 ```bash
-git submodule update --init redis_demo
+git submodule update --init many_faces_redis
 ```
 
 First-time publish on GitHub and registering the submodule: [`docs/guides/git-submodules.md`](../docs/guides/git-submodules.md) (monorepo root).
