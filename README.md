@@ -1,6 +1,6 @@
 # Redis Demo (`redis_demo`)
 
-Standalone repository (git submodule in `_mfai_demo`) — Redis 7 for the backend **job queue** (`bedemo:jobs:ready`, `bedemo:jobs:delayed`).
+Standalone repository (git submodule in **`many_faces_main`**) — Redis 7 for the backend **job queue** (`bedemo:jobs:ready`, `bedemo:jobs:delayed`).
 
 ## What runs
 
@@ -37,7 +37,7 @@ docker-compose up -d
 ./clear-redis.sh
 ```
 
-## Connection from `_mfai_demo`
+## Connection from `many_faces_main`
 
 The **be-demo-dev** container in root `docker-compose.dev.yml` uses:
 
@@ -47,7 +47,7 @@ Start Redis from this repo (published port 6379), then the backend.
 
 ## Git submodule in the monorepo root
 
-From `_mfai_demo` root:
+From `many_faces_main` root:
 
 ```bash
 git submodule update --init redis_demo
