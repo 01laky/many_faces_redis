@@ -53,7 +53,15 @@ From `many_faces_main` root:
 git submodule update --init many_faces_redis
 ```
 
-First-time publish on GitHub and registering the submodule: [`docs/guides/git-submodules.md`](../docs/guides/git-submodules.md) (monorepo root).
+Submodule workflow and publishing notes (paths are written for the monorepo checkout):
+
+- [docs/guides/git-submodules.md](https://github.com/01laky/many_faces_main/blob/main/docs/guides/git-submodules.md)
+
+**Documentation hub** (all guides, including AI-assisted content approval and Redis job semantics):
+
+- [docs/README.md](https://github.com/01laky/many_faces_main/blob/main/docs/README.md)
+
+Related stacks: [`many_faces_database`](https://github.com/01laky/many_faces_database), [`many_faces_backend`](https://github.com/01laky/many_faces_backend) (queue consumer), [`many_faces_logger`](https://github.com/01laky/many_faces_logger) (Dozzle).
 
 ## Container
 
