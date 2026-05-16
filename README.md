@@ -37,6 +37,8 @@ docker-compose up -d
 ./scripts/clear-redis.sh
 ```
 
+**Monorepo guide:** [`docs/guides/redis-workers-and-queues.md`](https://github.com/01laky/many_faces_main/blob/main/docs/guides/redis-workers-and-queues.md). Full stack: `./scripts/start-all-dev.sh` from **`many_faces_main`** starts Redis with the API unless you opt out.
+
 ## Connection from `many_faces_main`
 
 The **be-demo-dev** container in root `docker-compose.dev.yml` uses:
