@@ -1,6 +1,22 @@
 # Many Faces Redis (`many_faces_redis`)
 
-Standalone repository (git submodule in **`many_faces_main`**) — Redis 7 for the backend **job queue** (`bedemo:jobs:ready`, `bedemo:jobs:delayed`).
+**Redis infrastructure for Many Faces AI.** This standalone submodule provides the local Redis 7 node used by the backend for asynchronous jobs and for the operator AI live-statistics bundle cache.
+
+| Start here       | Value                                                |
+| ---------------- | ---------------------------------------------------- |
+| Start full stack | `../scripts/start-all-dev.sh` from `many_faces_main` |
+| Standalone       | `./scripts/start-redis.sh`                           |
+| Host port        | `localhost:6379`                                     |
+| Main keys        | `bedemo:jobs:*`, `bedemo:operator-ai:live-bundle:*`  |
+
+```mermaid
+flowchart LR
+    be["many_faces_backend"] --> jobs["Redis job queues<br/>bedemo:jobs:*"]
+    be --> cache["Operator AI live cache<br/>bedemo:operator-ai:live-bundle:*"]
+    jobs --> redis["redis-dev<br/>Redis 7 + AOF"]
+    cache --> redis
+    redis --> volume["Docker volume<br/>redis-data"]
+```
 
 ## What runs
 
