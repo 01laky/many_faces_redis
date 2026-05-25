@@ -2,6 +2,16 @@
 
 **Redis infrastructure for Many Faces AI.** This standalone submodule provides the local Redis 7 node used by the backend for asynchronous jobs and for the operator AI live-statistics bundle cache.
 
+> **First visit?** Backend-only — queues moderation/indexing jobs and caches **operator AI live stats** bundles. Not a public API.
+
+### Three pillars
+
+| Pillar | Highlights |
+| ------ | ----------- |
+| **Security** | Internal **`localhost:6379`** in dev; no auth in demo stack — **add ACL/password in production**; data in Docker volume with AOF. |
+| **AI** | **`bedemo:operator-ai:live-bundle:*`** — stage-1 cache for admin live stats map-reduce (TTL configurable in admin Settings). |
+| **Configuration** | Key prefixes: **`bedemo:jobs:*`** (async workers), live-bundle keys above; start via **`./scripts/start-redis.sh`** or monorepo **`start-all-dev.sh`**. Guide: [`../docs/guides/redis-workers-and-queues.md`](../docs/guides/redis-workers-and-queues.md). |
+
 | Start here       | Value                                                |
 | ---------------- | ---------------------------------------------------- |
 | Start full stack | `../scripts/start-all-dev.sh` from `many_faces_main` |
