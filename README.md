@@ -1,8 +1,6 @@
 # Many Faces Redis (`many_faces_redis`)
 
-**Redis infrastructure for Many Faces AI.** This standalone submodule provides the local Redis 7 node used by the backend for asynchronous jobs and for the operator AI live-statistics bundle cache.
-
-> **First visit?** Backend-only — queues moderation/indexing jobs and caches **operator AI live stats** bundles. Not a public API.
+**Redis infrastructure for Many Faces AI.** This standalone submodule provides the local Redis 7 node used by the backend for asynchronous jobs and for the operator AI live-statistics bundle cache. Backend-only — not a public API.
 
 ### Three pillars
 
