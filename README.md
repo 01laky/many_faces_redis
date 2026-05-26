@@ -1,14 +1,16 @@
 # Many Faces Redis (`many_faces_redis`)
 
 <!-- readme-badges:start -->
+
 [![version](https://img.shields.io/badge/version-0.3.2-blue)](./VERSION)
 ![Redis](https://img.shields.io/badge/Redis-7-DC382D)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED)
 [![CI](https://github.com/01laky/many_faces_main/actions/workflows/ci.yml/badge.svg)](https://github.com/01laky/many_faces_main/actions/workflows/ci.yml)
 ![platform](https://img.shields.io/badge/platform-Docker-2496ED)
+
 <!-- readme-badges:end -->
 
-**Version:** [`0.3.0`](./VERSION) · [Changelog](./CHANGELOG.md)
+**Version:** [`0.3.2`](./VERSION) · [Changelog](./CHANGELOG.md)
 
 **Author:** Ladislav Kostolny · [01laky@gmail.com](mailto:01laky@gmail.com)
 
